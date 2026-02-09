@@ -1,11 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import AllProducts from './app/component/allproduct'
 
 function App() {
   return (
-    <h1>app</h1>
+    <AllProducts/>
   )
 }
 
