@@ -1,8 +1,8 @@
-import { useGetAllProductsQuery, useGetProductByIdQuery } from "../service/dummydata";
+import { useGetAllProductsQuery} from "../service/dummydata";
 
 const AllProducts =()=>{
   
-  const {data, isError, isLoading} = useGetProductByIdQuery(2);
+  const {data, isError, isLoading} = useGetAllProductsQuery();
   if(isError){
     return <h1>there is an error</h1>
   }
