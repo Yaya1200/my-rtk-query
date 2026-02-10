@@ -17,7 +17,7 @@ function AddNewProduct() {
         title:"Apple MAC BOOK",
         discription: "it is the best mac book now"
       }
-      addNewProduct(newproduct)
+      await addNewProduct(newproduct)
 
     }
     catch
