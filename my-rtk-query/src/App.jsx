@@ -1,9 +1,10 @@
 import './App.css'
-import AllProducts from './app/component/allproduct'
+//import AllProducts from './app/component/allproduct'
+import UpdateProduct from './app/component/updateproduct'
 
 function App() {
   return (
-    <AllProducts/>
+    <UpdateProduct/>
   )
 }
 
