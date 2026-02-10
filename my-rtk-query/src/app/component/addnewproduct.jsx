@@ -3,10 +3,43 @@ import { useAddNewProductMutation } from '../service/dummydata'
 
 
 function AddNewProduct() {
-  const res = useAddNewProductMutation()
-  console.log(res);
+  const [addNewProduct,{data,isError,isLoading} ] = useAddNewProductMutation();
+  if(isError){
+    <h1>there is an error</h1>
+  }
+  if(isLoading){
+    <h1> loading ...</h1>
+  }
+  const eventhandler = async()=>{
+    try{
+      const newproduct = {
+        id: "1",
+        title:"Apple MAC BOOK",
+        discription: "it is the best mac book now"
+      }
+      addNewProduct(newproduct)
+
+    }
+    catch
+    {
+     console.log("there is an error", err);
+    }
+  }
+
   return (
-    <div>AddNewProduct</div>
+    <div>
+      <h1>
+        {data?.id}
+      </h1>
+      <h1>
+        {data?.title}
+      </h1>
+      <h1>
+        {data?.discription}
+      </h1>
+    <button onClick={eventhandler} 
+    disabled={isLoading}>AddNewProduct</button>
+    </div>
   )
 }
 
